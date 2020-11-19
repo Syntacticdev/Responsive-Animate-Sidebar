@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <a href="" class="text-logo">SYNTACTIC</a>
+            <button class="openBtn">
+                <div></div>
+            </button>
+            <button class="closeBtn">
+                <div></div>
+            </button>
+        </div>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Site Map</a></li>
+            <li><a href="">Faq</a></li>
+        </ul>
+    </div>
+
+    <div class="one"></div>
+    </body>
+    <script>
+        const openBtn = document.querySelector('.openBtn')
+        const closeBtn = document.querySelector('.closeBtn')
+        const sidebar = document.querySelector('.sidebar')
+
+
+        openBtn.addEventListener('click',()=>{
+                sidebar.style.left = 0
+                sidebar.style.transition = `${850}ms `
+                closeBtn.style.display = 'block'
+                openBtn.style.display = 'none'
+        })
+
+        closeBtn.addEventListener('click',()=>{
+            sidebar.style.left = "-1000px"
+                sidebar.style.transition = `${1000}ms `
+                closeBtn.style.display = 'none'
+                openBtn.style.display = 'block'
+        })
+    </script>
+</body>
+</html>
